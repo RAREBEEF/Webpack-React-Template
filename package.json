@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "prepare": "hysky install",
+    "prepare": "husky install",
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
