@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "prepare": "hysky install",
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
@@ -24,6 +25,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "postcss": "^8.3.9",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.4.1",
@@ -41,5 +44,12 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add ."
+    ]
   }
 }
